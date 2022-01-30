@@ -9,7 +9,7 @@ async function getWeather() {
     // api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}-->5days
     // api.openweathermap.org/data/2.5/forecast/daily?q={city name}&cnt={cnt}&appid={API key}-->16days
     let response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=fe1ec66c0e5347deb8372802220601&q=${city}&days=5&aqi=yes&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=fe1ec66c0e5347deb8372802220601&q=${city}&days=5&aqi=yes&alerts=no`
     );
 
     //   http://api.weatherapi.com/v1/forecast.json?key=fe1ec66c0e5347deb8372802220601&q=${city}&days=5&aqi=no&alerts=no
