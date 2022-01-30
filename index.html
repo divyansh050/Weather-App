@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+
+<link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body>
+    <!-- top heading region and country -->
+    <div id="topBar">
+      <h1>
+        <span id="country">Country,</span>
+        <span id="region">Region</span>
+      </h1>
+    </div>
+
+    <!-- side pannel bar blur  -->
+    <div id="sideBar">
+      <div>
+        <input
+          onkeypress="Key(event)"
+          type="text"
+          id="city"
+          placeholder="Search Location..."
+        />
+        <div class="menuBtn">
+          <button id="searchBtn" onclick="getWeather()">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/751/751463.png"
+              alt=""
+            />
+          </button>
+          <button id="mapBtn" onclick="toggleMap()" class="map">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/731/731584.png"
+              alt=""
+            />
+          </button>
+          <button id="btn7" class="forecast" onclick="toggleInfo()">
+            <img src="./images/day7.png" alt="" />
+          </button>
+        </div>
+      </div>
+
+      <!-- locationinfo  -->
+      <div class="locationInfo">
+        <div>
+          <p>Main temp</p>
+          <p class="feelsLike">main temp</p>
+        </div>
+
+        <div>
+          <p>Max / Min</p>
+          <p class="maxMin">20/14</p>
+        </div>
+
+        <div>
+          <p>Wind speed / Direction</p>
+          <p class="windSpeed"></p>
+        </div>
+
+        <div>
+          <p>Humidity</p>
+          <p class="humidity">humidity</p>
+        </div>
+
+        <div>
+          <p>Pressure</p>
+          <p class="pressure">pressure</p>
+        </div>
+
+        <div>
+          <p>Air Pollution Level</p>
+          <p class="airQlty">Air PM2.5</p>
+        </div>
+
+        <div>
+          <p>Visibility</p>
+          <p class="visibility">visibility Km</p>
+        </div>
+
+        <div>
+          <p>UV</p>
+          <p class="uv">Uv</p>
+        </div>
+
+        <div>
+          <p>Sun Rise / Sun Set</p>
+          <p class="setRise">sun rise/sun set</p>
+        </div>
+
+        <div>
+          <p>Last Updated</p>
+          <p class="lastUpdate">last Update</p>
+        </div>
+      </div>
+
+      <!-- 7 day forecast -->
+      <div class="locationInfo2 none">
+        <div>
+          <p>Main temp</p>
+          <p class="feelsLike">main temp</p>
+          <p>Main temp</p>
+          <p class="feelsLike">main temp</p>
+        </div>
+
+        <div>
+          <p>Max / Min</p>
+          <p class="maxMin">20/14</p>
+          <p>Max / Min</p>
+          <p class="maxMin">20/14</p>
+        </div>
+
+        <div>
+          <p>Wind speed / Direction</p>
+          <p class="windSpeed"></p>
+          <p>Wind speed / Direction</p>
+          <p class="windSpeed"></p>
+        </div>
+
+        <div>
+          <p>Humidity</p>
+          <p class="humidity">humidity</p>
+          <p>Humidity</p>
+          <p class="humidity">humidity</p>
+        </div>
+
+        <div>
+          <p>Pressure</p>
+          <p class="pressure">pressure</p>
+          <p>Pressure</p>
+          <p class="pressure">pressure</p>
+        </div>
+
+        <div>
+          <p>Air Pollution Level</p>
+          <p class="airQlty">Air PM2.5</p>
+          <p>Air Pollution Level</p>
+          <p class="airQlty">Air PM2.5</p>
+        </div>
+
+        <div>
+          <p>Visibility</p>
+          <p class="visibility">visibility Km</p>
+          <p>Visibility</p>
+          <p class="visibility">visibility Km</p>
+        </div>
+
+        <div>
+          <p>UV</p>
+          <p class="uv">Uv</p>
+          <p>UV</p>
+          <p class="uv">Uv</p>
+        </div>
+      </div>
+
+<div class="mapInfo">
+
+</div>
+
+    </div>
+
+    <!-- bottomBar -->
+    <div id="bottomBar">
+      <!-- icon and  wether status -->
+      <!-- city and date -->
+      <div>
+        <h1 class="temp">18</h1>
+        <div class="icon">icon</div>
+      </div>
+      <div>
+        <span class="status">status of the weather</span>
+      </div>
+
+      <div>
+        <h2 class="city">Gwalior</h2>
+
+        <span class="date">date</span>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="./scripts/main.js"></script>
